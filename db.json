@@ -2,6 +2,7 @@
     "bg": "https://sm.ign.com/ign_es/screenshot/default/final-fantasy-vii-remake-key-visual-large_n8ka.jpg",
     "title": "Quiz de Final Fantasy",
     "description": "Teste os seus conhecimentos sobre Final Fantasy",
+    "siteURL" : "https://ffquiz.vercel.app/",
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",

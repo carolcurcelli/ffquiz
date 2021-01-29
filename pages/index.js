@@ -1,15 +1,13 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
-import IndexPage from '../src/components/IndexPage';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
 //   flex:1;
@@ -29,16 +27,37 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  let [name, setName] = React.useState('');
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <IndexPage />
       <QuizContainer>
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>{db.description}</p>
+            <form onSubmit={function (e) {
+              e.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do React'); 
+
+              // router manda para a próxima página
+            }}
+            >
+              <input
+                onChange={function (e) {
+                  // State
+                  // name = e.target.value;
+                  setName(e.target.value);
+                }}
+                placeholder="Digite aqui seu nome"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>

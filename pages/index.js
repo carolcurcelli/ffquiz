@@ -6,6 +6,7 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Form from '../src/components/Form';
 import QuizBackground from '../src/components/QuizBackground';
 
 // const BackgroundImage = styled.div`
@@ -37,27 +38,31 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit={function (e) {
-              e.preventDefault();
-              router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do React'); 
+            <p>{db.description}</p>
+            <Form>
+              <form onSubmit={function (e) {
+                e.preventDefault();
+                router.push(`/quiz?name=${name}`);
+                console.log('Fazendo uma submissão por meio do React'); 
 
-              // router manda para a próxima página
-            }}
-            >
-              <input
-                onChange={function (e) {
-                  // State
-                  // name = e.target.value;
-                  setName(e.target.value);
-                }}
-                placeholder="Digite aqui seu nome"
-              />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
-            </form>
+                // router manda para a próxima página
+              }}
+              >
+                <input
+                  onChange={function (e) {
+                    // State
+                    // name = e.target.value;
+                    setName(e.target.value);
+                  }}
+                  placeholder="Digite aqui seu nome"
+                />
+                <button type="submit" disabled={name.length === 0}>
+                  Jogar
+                  {' '}
+                  {name}
+                </button>
+              </form>
+            </Form>
           </Widget.Content>
         </Widget>
         <Widget>

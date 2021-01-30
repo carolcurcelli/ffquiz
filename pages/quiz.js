@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -28,11 +30,12 @@ function LoadingWidget() {
   );
 }
 
-function ResultWidget({ results }) {
+function ResultWidget({ results, name }) {
   return (
     <Widget>
       <Widget.Header>
-        Your results are...
+        {name}
+        , here is your score:
       </Widget.Header>
       <Widget.Content>
         <div>
@@ -83,6 +86,7 @@ function QuestionWidget({
   totalQuestions,
   onSubmit,
   addResult,
+  name,
 }) {
   const [selectedAlternative, setSelectedAlternative] = React.useState();
   const [isQuestionSubmitted, setIsQuestionSubmitted] = React.useState();
@@ -94,7 +98,7 @@ function QuestionWidget({
       <Widget.Header>
         {/* <BackLinkArrow href="" /> */}
         <h3>
-          {`Question ${questionIndex + 1} of ${totalQuestions}`}
+          {`${name}, this is question ${questionIndex + 1} of ${totalQuestions}`}
         </h3>
       </Widget.Header>
 
@@ -173,6 +177,15 @@ function QuestionWidget({
   );
 }
 
+QuestionWidget.propTypes = {
+  question: PropTypes.string.isRequired,
+  questionIndex: PropTypes.number.isRequired,
+  totalQuestions: PropTypes.number.isRequired,
+  onSubmit: PropTypes.string.isRequired,
+  addResult: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
 const screenStates = {
   QUIZ: 'QUIZ',
   LOADING: 'LOADING',
@@ -185,6 +198,8 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
+  const router = useRouter();
+  const { name } = router.query;
 
   function addResult(result) {
     // results.push(result);
@@ -228,10 +243,11 @@ export default function QuizPage() {
             totalQuestions={totalQuestions}
             onSubmit={handleSubmitQuiz}
             addResult={addResult}
+            name={name}
           />
         )}
         {screenState === screenStates.LOADING && <LoadingWidget />}
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} name={name} />}
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/carolsvntos" />
     </QuizBackground>

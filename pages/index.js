@@ -21,7 +21,7 @@ import QuizContainer from '../src/components/QuizContainer';
 
 export default function Home() {
   const router = useRouter();
-  let [name, setName] = React.useState('');
+  const [name, setName] = React.useState('');
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -34,9 +34,11 @@ export default function Home() {
             <p>{db.description}</p>
             <form onSubmit={function (e) {
               e.preventDefault();
-              router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do React');
-
+              // router.push(`/quiz?name=${name}`);
+              router.push({
+                pathname: '/quiz',
+                query: { name },
+              });
               // router manda para a próxima página
             }}
             >
@@ -44,6 +46,7 @@ export default function Home() {
                 name="nomeDoUsuario"
                 onChange={(e) => setName(e.target.value)}
                 placeholder="What is your name, hero?"
+                value={name}
               />
               <Button
                 type="submit"
@@ -55,10 +58,10 @@ export default function Home() {
           </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Content>
+          {/* <Widget.Content>
             <h1>Other Quizes</h1>
             <p>Lorem</p>
-          </Widget.Content>
+          </Widget.Content> */}
         </Widget>
         <Footer />
       </QuizContainer>

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const InputBase = styled.button`
+const ButtonBase = styled.button`
     width:100%;
     color:${({ theme }) => theme.colors.contrastText};
     background:${({ theme }) => theme.colors.secondary};
@@ -26,23 +27,32 @@ const InputBase = styled.button`
     }
 `;
 
-// eslint-disable-next-line import/prefer-default-export
-export default function Input({ onChange, placeholder, ...props }) {
+function Button({
+  type,
+  disabled,
+  text,
+  id,
+}) {
+  if (disabled && id === 'index') {
+    return (
+      <ButtonBase type={type} disabled={disabled} id={id}>
+        New Game
+      </ButtonBase>
+    );
+  }
   return (
-    <div>
-      <InputBase
-        placeholder={placeholder}
-        onChange={onChange}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...props}
-      />
-    </div>
+    <ButtonBase type={type} disabled={disabled} id={id}>
+      {text}
+    </ButtonBase>
   );
 }
 
-Input.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['submit', 'type', 'button']).isRequired,
+  disabled: PropTypes.bool.isRequired,
+  id: PropTypes.bool.isRequired,
 };
+
+// eslint-disable-next-line import/prefer-default-export
+export default Button;

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -43,9 +45,12 @@ export default function Home() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="What is your name, hero?"
               />
-              <Button type="submit" disabled={name.length === 0}>
-                {`Play as ${name}`}
-              </Button>
+              <Button
+                type="submit"
+                id="index"
+                disabled={name.length === 0}
+                text={`Play as ${name}`}
+              />
             </form>
           </Widget.Content>
         </Widget>

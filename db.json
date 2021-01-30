@@ -1,144 +1,143 @@
 {
-    "bg": "https://sm.ign.com/ign_es/screenshot/default/final-fantasy-vii-remake-key-visual-large_n8ka.jpg",
-    "title": "Final Fantasy Quiz",
-    "description": "Let's put your Final Fantasy knowledge to the test!",
-    "siteURL" : "https://ffquiz.vercel.app/",
-    "questions": [
-      {
-        "image": "https://3.bp.blogspot.com/-WMffEHYGyes/UQirormLK9I/AAAAAAAAcXk/j5OSv9YYJYs/s280/Final_Fantasy_%2528NES%2529_Replay_46.gif",
-        "title": "When was the first Final Fantasy game released?",
-        "description": "Tale as old as time...",
-        "answer": 2,
-        "alternatives": [
-           "1985",
-           "1986",
-           "1987",
-           "1988"
-        ]
-      },
-      {
-        "image": "https://64.media.tumblr.com/ba44e8e2f74dab70cd6b296972672c39/tumblr_inline_odbkicviom1r8a94o_500.gifv",
-        "title": "Which one of these is a continent in Final Fantasy IX?",
-        "description": "Zidane would certainly remember!",
-        "answer": 3,
-        "alternatives": [
-           "Ancient Continent",
-           "Gaia Continent",
-           "Southern Continent",
-           "Mist Continent"
-        ]
-      },
-      {
-        "image": "https://64.media.tumblr.com/57aec012c0709851920d8d23cdeff3ed/caa48f67dc757711-82/s400x600/fdda092d0492c82845d05f06c072b1b47315f609.gifv",
-        "title": "Which one of these is a recurring name for princesses in the series?",
-        "description": "Cid has been in the series since Final Fantasy IV, but that's not the only recurring name.",
-        "answer": 1,
-        "alternatives": [
-          "Anna",
-          "Sarah",
-          "Emma",
-          "Mia"
-        ]
-      },
-      {
-        "image": "https://64.media.tumblr.com/6ce903e9d2b4bb14653142e6435a97b9/tumblr_otkwopWVYp1w61oqao1_r1_500.gif",
-        "title": "What is Rikku's native language in Final Fantasy X?",
-        "description": "Easy one... if you got all your Primers, that is.",
-        "answer": 0,
-        "alternatives": [
-          "Al Bhed",
-          "Cetra",
-          "Au Ra",
-          "Fal'Cie"
-        ]
-      },
-      {
-        "image": "https://data.whicdn.com/images/280959863/original.gif",
-        "title": "What is a Moogle's favorite snack?",
-        "description": "Terra's favorites.",
-        "answer": 0,
-        "alternatives": [
-           "Ghysal greens",
-           "Kupo nuts",
-           "Boko carrots",
-           "Cleyran cookies"
-        ]
-      },
-      {
-        "image": "https://thumbs.gfycat.com/PowerlessSmoothGoldenmantledgroundsquirrel-small.gif",
-        "title": "Which one of these is NOT a Final Fantasy summon?",
-        "description": "Don't get this wrong and upset Rydia.",
-        "answer": 3,
-        "alternatives": [
-           "Sylph",
-           "Yojimbo",
-           "Bahamut ZERO",
-           "Izanagi"
-        ]
-      },
-      {
-        "image": "https://64.media.tumblr.com/0818aa00a531ec681b6eb7454dc6c430/tumblr_p11kcmXW9a1ugq03no3_r1_540.gifv",
-        "title": "Which of these is an organization Squall Leonhart was a member of?",
-        "description": "It's where he got pretty cool",
-        "answer": 1,
-        "alternatives": [
-           "AVALANCHE",
-           "SeeD",
-           "Forest Owls",
-           "Tantalus"
-        ]
-      },
-      {
-        "image": "https://25.media.tumblr.com/tumblr_lxlvbkD4di1qfjlqfo1_500.gif",
-        "title": "Who is the main character of Final Fantasy V?",
-        "description": "Pretty cool name, if you ask me.",
-        "answer": 0,
-        "alternatives": [
-           "Ceodore Harvey",
-           "Firion",
-           "Luneth",
-           "Bartz Klauser"
-        ]
-      },
-      {
-        "image": "https://i.pinimg.com/originals/a9/c7/58/a9c75857e7634a8664f7c78d5618e984.gif",
-        "title": "Who does Ovelia marry in Final Fantasy Tactics",
-        "description": "She does go through quite a lot.",
-        "answer": 2,
-        "alternatives": [
-           "Ramza",
-           "Mustadio",
-           "Delita",
-           "Agrias"
-        ]
-      },
-      {
-        "image": "https://66.media.tumblr.com/df3c5953489fe474f322c7001ab18124/63998e0b47085b32-1e/s540x810/664b87e82917bbe3e56ec471a93ade5a91160ad9.gif",
-        "title": "Which one of these is an Aerith Gainsborough limit break?",
-        "description": "Faz tempo em haha",
-        "answer": 1,
-        "alternatives": [
-           "Grand Summon",
-           "Fury Brand",
-           "Protector of Mankind",
-           "Angel Wing"
-        ]
-      }
-    ],
-    "external": [
-      ""
-    ],
-    "theme": {
-      "colors": {
-        "primary": "#524b81",
-        "secondary": "#d39bc0",
-        "border": "#333669",
-        "mainBg": "#1C1B14",
-        "contrastText": "#FFFFFF",
-        "wrong": "#FF5722",
-        "success": "#333669"
-      },
-      "borderRadius": "4px"
+  "bg": "https://sm.ign.com/ign_es/screenshot/default/final-fantasy-vii-remake-key-visual-large_n8ka.jpg",
+  "title": "Final Fantasy Quiz",
+  "description": "Let's put your Final Fantasy knowledge to the test!",
+  "siteURL" : "https://ffquiz.vercel.app/",
+  "questions": [
+    {
+      "image": "https://3.bp.blogspot.com/-WMffEHYGyes/UQirormLK9I/AAAAAAAAcXk/j5OSv9YYJYs/s280/Final_Fantasy_%2528NES%2529_Replay_46.gif",
+      "title": "When was the first Final Fantasy game released?",
+      "description": "Tale as old as time...",
+      "answer": 2,
+      "alternatives": [
+         "1985",
+         "1986",
+         "1987",
+         "1988"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/ba44e8e2f74dab70cd6b296972672c39/tumblr_inline_odbkicviom1r8a94o_500.gifv",
+      "title": "Which one of these is a continent in Final Fantasy IX?",
+      "description": "Zidane would certainly remember!",
+      "answer": 3,
+      "alternatives": [
+         "Ancient Continent",
+         "Gaia Continent",
+         "Southern Continent",
+         "Mist Continent"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/57aec012c0709851920d8d23cdeff3ed/caa48f67dc757711-82/s400x600/fdda092d0492c82845d05f06c072b1b47315f609.gifv",
+      "title": "Which one of these is a recurring name for princesses in the series?",
+      "description": "Cid has been in the series since Final Fantasy IV, but that's not the only recurring name.",
+      "answer": 1,
+      "alternatives": [
+        "Anna",
+        "Sarah",
+        "Emma",
+        "Mia"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/6ce903e9d2b4bb14653142e6435a97b9/tumblr_otkwopWVYp1w61oqao1_r1_500.gif",
+      "title": "What is Rikku's native language in Final Fantasy X?",
+      "description": "Easy one... if you got all your Primers, that is.",
+      "answer": 0,
+      "alternatives": [
+        "Al Bhed",
+        "Cetra",
+        "Au Ra",
+        "Fal'Cie"
+      ]
+    },
+    {
+      "image": "https://data.whicdn.com/images/280959863/original.gif",
+      "title": "What is a Moogle's favorite snack?",
+      "description": "Terra's favorites.",
+      "answer": 1,
+      "alternatives": [
+         "Ghysal greens",
+         "Kupo nuts",
+         "Boko carrots",
+         "Cleyran cookies"
+      ]
+    },
+    {
+      "image": "https://thumbs.gfycat.com/PowerlessSmoothGoldenmantledgroundsquirrel-small.gif",
+      "title": "Which one of these is NOT a Final Fantasy summon?",
+      "description": "Don't get this wrong and upset Rydia.",
+      "answer": 3,
+      "alternatives": [
+         "Sylph",
+         "Yojimbo",
+         "Bahamut ZERO",
+         "Izanagi"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/0818aa00a531ec681b6eb7454dc6c430/tumblr_p11kcmXW9a1ugq03no3_r1_540.gifv",
+      "title": "Which of these is an organization Squall Leonhart was a member of?",
+      "description": "It's where he got pretty cool",
+      "answer": 1,
+      "alternatives": [
+         "AVALANCHE",
+         "SeeD",
+         "Forest Owls",
+         "Tantalus"
+      ]
+    },
+    {
+      "image": "https://25.media.tumblr.com/tumblr_lxlvbkD4di1qfjlqfo1_500.gif",
+      "title": "Who is the main character of Final Fantasy V?",
+      "description": "Pretty cool name, if you ask me.",
+      "answer": 3,
+      "alternatives": [
+         "Ceodore Harvey",
+         "Firion",
+         "Luneth",
+         "Bartz Klauser"
+      ]
+    },
+    {
+      "image": "https://i.pinimg.com/originals/a9/c7/58/a9c75857e7634a8664f7c78d5618e984.gif",
+      "title": "Who does Ovelia marry in Final Fantasy Tactics",
+      "description": "She does go through quite a lot.",
+      "answer": 2,
+      "alternatives": [
+         "Ramza",
+         "Mustadio",
+         "Delita",
+         "Agrias"
+      ]
+    },
+    {
+      "image": "https://66.media.tumblr.com/df3c5953489fe474f322c7001ab18124/63998e0b47085b32-1e/s540x810/664b87e82917bbe3e56ec471a93ade5a91160ad9.gif",
+      "title": "Which one of these is an Aerith Gainsborough limit break?",
+      "description": "One of the many abilities of our mysterious flower girl",
+      "answer": 1,
+      "alternatives": [
+         "Grand Summon",
+         "Fury Brand",
+         "Protector of Mankind",
+         "Angel Wing"
+      ]
     }
+  ],
+  "external": [
+    ""
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#524b81",
+      "secondary": "#d39bc0",
+      "border": "#333669",
+      "mainBg": "#1C1B14",
+      "contrastText": "#FFFFFF",
+      "wrong": "#cc6868",
+      "success": "#aacc68"
+    },
+    "borderRadius": "4px"
   }
-  
+}

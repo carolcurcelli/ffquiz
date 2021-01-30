@@ -6,26 +6,17 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-import Form from '../src/components/Form';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
 //   flex:1;
 //   background-size:cover;
 //   background-position:center;
-// `;
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+// `;return (
 
 export default function Home() {
   const router = useRouter();
@@ -39,35 +30,28 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
-            <Form>
-              <form onSubmit={function (e) {
-                e.preventDefault();
-                router.push(`/quiz?name=${name}`);
-                console.log('Fazendo uma submissão por meio do React'); 
+            <form onSubmit={function (e) {
+              e.preventDefault();
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do React');
 
-                // router manda para a próxima página
-              }}
-              >
-                <input
-                  onChange={function (e) {
-                    // State
-                    // name = e.target.value;
-                    setName(e.target.value);
-                  }}
-                  placeholder="Digite aqui seu nome"
-                />
-                <button type="submit" disabled={name.length === 0}>
-                  Jogar
-                  {' '}
-                  {name}
-                </button>
-              </form>
-            </Form>
+              // router manda para a próxima página
+            }}
+            >
+              <Input
+                name="nomeDoUsuario"
+                onChange={(e) => setName(e.target.value)}
+                placeholder="What is your name, hero?"
+              />
+              <Button type="submit" disabled={name.length === 0}>
+                {`Play as ${name}`}
+              </Button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>Quizes da galera</h1>
+            <h1>Other Quizes</h1>
             <p>Lorem</p>
           </Widget.Content>
         </Widget>

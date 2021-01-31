@@ -126,7 +126,8 @@
     }
   ],
   "external": [
-    ""
+    "https://covidquiz.felipevalerio.vercel.app/",
+    "https://aluraquiz.matheusjos3.vercel.app/"
   ],
   "theme": {
     "colors": {

@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://img.shields.io/github/languages/code-size/carolsvntos/ffquiz">
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fcarolsvntos.github.io%2Fffquiz%2F">
+  <img src="https://img.shields.io/website?url=https%3A%2F%2Fffquiz-carolsvntos.vercel.app">
   <img src="https://img.shields.io/github/stars/carolsvntos/ffquiz?style=social">
   <img src="https://img.shields.io/twitter/follow/carolsvntos?style=social">
   <br /><br /><br /><br />
